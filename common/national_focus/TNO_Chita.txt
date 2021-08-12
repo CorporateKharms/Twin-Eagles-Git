@@ -1,0 +1,3396 @@
+focus_tree = {
+	id = TNO_Chita_starting
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 15
+			tag = WCH
+		}
+	}
+	focus = {
+		id = WCH_the_true_heirs_of_harbin
+		icon = GFX_WCH_the_true_heir_of_harbin
+		cost = 3.00
+		x = 6
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_true_heirs_of_harbin"
+			country_event = { id = WCH.12 days = 1 }
+		}
+	}
+	focus = {
+		id = WCH_Western_defence_scheme
+		icon = GFX_YUN_Fortify_The_Border
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_the_true_heirs_of_harbin
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_the_true_heirs_of_harbin
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_Western_defence_scheme"
+			563 = {
+				add_building_construction = {
+					type = bunker
+					province = 1826
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 10643
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_civilian_investments
+		icon = GFX_VOL_Budget_Debate
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_the_true_heirs_of_harbin
+		}
+		x = -4
+		y = 1
+		relative_position_id = WCH_the_true_heirs_of_harbin
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_civilian_investments"
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_favoured
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+	focus = {
+		id = WCH_mining_knowledge
+		icon = GFX_WRS_re_open_mines
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_civilian_investments
+		}
+		x = 2
+		y = 1
+		relative_position_id = WCH_civilian_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_mining_knowledge"
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_favoured
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
+	focus = {
+		id = WCH_Military_investments
+		icon = GFX_VOL_Military_Debate
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_the_true_heirs_of_harbin
+		}
+		x = 4
+		y = 1
+		relative_position_id = WCH_the_true_heirs_of_harbin
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_Military_investments"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+				country_event = { id = WCH.35 days = 8 random = 24 }
+			}
+			custom_effect_tooltip = WHC_Army_favoured
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 15
+		}
+	}
+	focus = {
+		id = WCH_import_industrial_expertise
+		icon = GFX_GER_reforming_business
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_civilian_investments
+		}
+		x = -2
+		y = 1
+		relative_position_id = WCH_civilian_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_import_industrial_expertise"
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_favoured
+			MAN = {
+				country_event = {
+					id = WCH.3
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_connecting_chita
+		icon = GFX_ITA_Modernize_the_Infrastructures
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_import_industrial_expertise
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_import_industrial_expertise
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_connecting_chita"
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_very_favoured
+			563 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_industrial_machinery_deal
+		icon = GFX_generic_diplomacy_industrial
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_civilian_investments
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_civilian_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_industrial_machinery_deal"
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_favoured
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = WCH_examining_the_force
+		icon = GFX_YUN_New_Officers
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_Military_investments
+		}
+		x = -2
+		y = 1
+		relative_position_id = WCH_Military_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_examining_the_force"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+			}
+			custom_effect_tooltip = WHC_Army_favoured
+			army_experience = 10
+			add_war_support = 0.1
+			add_tech_bonus = {
+				name = military_bonus
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+			hidden_effect = {
+				country_event = { id = WCH.42 days = 3 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_examine_our_artillery
+		icon = GFX_MAG_Superior_Firepower
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_Military_investments
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_Military_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_examine_our_artillery"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+			}
+			custom_effect_tooltip = WHC_Army_favoured
+			add_tech_bonus = {
+				name = military_bonus
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = WCH_western_defence_scheme2
+		icon = GFX_BAS_Fortification_Building
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_Western_defence_scheme
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_Western_defence_scheme
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_western_defence_scheme2"
+			563 = {
+				add_building_construction = {
+					type = bunker
+					province = 7786
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12641
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_new_infrastructure
+		icon = GFX_RAJ_Our_Available_Resources
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_mining_knowledge
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_mining_knowledge
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_new_infrastructure"
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_very_favoured
+			add_timed_idea = { idea = WCH_imperial_prospector_corps days = 1080 }
+		}
+	}
+	focus = {
+		id = WCH_public_works_company
+		icon = GFX_KHA_industrial_data_consolidation
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_industrial_machinery_deal
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_industrial_machinery_deal
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_public_works_company"
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+				WHC_tax_conflict_towards_civilians = yes
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_super_favoured
+			add_ideas = WCH_imperial_development_company
+		}
+	}
+	focus = {
+		id = WCH_industrialization
+		icon = GFX_JAP_Standardizing_Heavy_Industry
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_connecting_chita
+		}
+		prerequisite = {
+			focus = WCH_public_works_company
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_connecting_chita
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_industrialization"
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_very_favoured
+			563 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_war_resources
+		icon = GFX_KHA_return_to_the_mines
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_new_infrastructure
+		}
+		prerequisite = {
+			focus = WCH_public_works_company
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_new_infrastructure
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_war_resources"
+			TNO_improve_industrial_equipment_med = yes
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_very_favoured
+			563 = {
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+				add_resource = {
+					type = chromium
+					amount = 5
+				}
+				add_resource = {
+					type = tungsten
+					amount = 5
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_reclamation_act
+		icon = GFX_MAG_The_Siberian_Bill_Of_Rights
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_industrialization
+		}
+		prerequisite = {
+			focus = WCH_war_resources
+		}
+		x = 0
+		y = 2
+		relative_position_id = WCH_public_works_company
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_reclamation_act"
+			hidden_effect = {
+				WHC_tax_conflict_towards_civilians = yes
+				WHC_tax_conflict_towards_civilians = yes
+				WHC_tax_conflict_towards_civilians = yes
+			}
+			custom_effect_tooltip = WHC_Civil_super_favoured
+			563 = {
+				add_extra_state_shared_building_slots = 4
+			}
+			add_manpower = 2500
+			country_event = {
+				id = WCH.6
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = WCH_eastern_defense_scheme
+		icon = GFX_generic_diplomacy_defense
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_western_defence_scheme2
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_western_defence_scheme2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_eastern_defense_scheme"
+			563 = {
+				add_building_construction = {
+					type = bunker
+					province = 7691
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_eastern_defense_scheme2
+		icon = GFX_YUN_The_Best_Defense
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_eastern_defense_scheme
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_eastern_defense_scheme
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_eastern_defense_scheme2"
+			563 = {
+				add_building_construction = {
+					type = bunker
+					province = 12660
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_eastern_defence_scheme3
+		icon = GFX_BAS_redoubt_preperations
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_eastern_defense_scheme2
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_eastern_defense_scheme2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_eastern_defence_scheme3"
+			563 = {
+				add_building_construction = {
+					type = bunker
+					province = 7851
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_importing_rifles
+		icon = GFX_CHI_Protecting_Japanese_Interests
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_examining_the_force
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_examining_the_force
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_importing_rifles"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+				WHC_tax_conflict_towards_military = yes
+			}
+			custom_effect_tooltip = WHC_Army_very_favoured
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 1000
+				producer = JAP
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment_1
+				amount = 250
+				producer = JAP
+			}
+		}
+	}
+	focus = {
+		id = WCH_artillery_imports
+		icon = GFX_generic_artillery_warfare
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_examine_our_artillery
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_examine_our_artillery
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_artillery_imports"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+				WHC_tax_conflict_towards_military = yes
+			}
+			custom_effect_tooltip = WHC_Army_very_favoured
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_2
+				amount = 350
+				producer = JAP
+			}
+		}
+	}
+	focus = {
+		id = WCH_specialist_training
+		icon = GFX_MAG_Japanese_Advisors
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_Military_investments
+		}
+		x = 2
+		y = 1
+		relative_position_id = WCH_Military_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_specialist_training"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+			}
+			custom_effect_tooltip = WHC_Army_favoured
+			army_experience = 20
+			add_timed_idea = { idea = WCH_specialist_training_idea days = 1200 }
+		}
+	}
+	focus = {
+		id = WCH_the_Far_East_Finest
+		icon = GFX_CZE_Soldier_Saluting_Rubble
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_the_tsar_combined_arms
+		}
+		prerequisite = {
+			focus = WCH_true_modern_warfare
+		}
+		x = 0
+		y = 2
+		relative_position_id = WCH_artillery_imports
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_Far_East_Finest"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+				WHC_tax_conflict_towards_military = yes
+				WHC_tax_conflict_towards_military = yes
+				country_event = { id = WCH.34 days = 8 random = 24 }
+			}
+			custom_effect_tooltip = WHC_Army_super_favoured
+			add_war_support = 0.15
+			add_ideas = WCH_far_easts_finest
+		}
+	}
+	focus = {
+		id = WCH_the_Tsars_own_division
+		icon = GFX_goal_KIR_The_Imperial_Russian_Army
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_specialist_training
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_specialist_training
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_Tsars_own_division"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+				WHC_tax_conflict_towards_military = yes
+				WHC_tax_conflict_towards_military = yes
+				load_oob = WCH_mountaineer_focus
+				country_event = { id = WCH.33 days = 8 random = 24 }
+			}
+			custom_effect_tooltip = WHC_Army_super_favoured
+			custom_effect_tooltip = WHC_Mountaineers_Spawned
+		}
+	}
+	focus = {
+		id = WCH_the_tsar_combined_arms
+		icon = GFX_ORE_adapting_their_strategies
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_importing_rifles
+		}
+		prerequisite = {
+			focus = WCH_artillery_imports
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_importing_rifles
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_tsar_combined_arms"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+				WHC_tax_conflict_towards_military = yes
+			}
+			custom_effect_tooltip = WHC_Army_very_favoured
+			add_tech_bonus = {
+				name = military_bonus
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = WCH_true_modern_warfare
+		icon = GFX_YUN_The_War_Machine
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_artillery_imports
+		}
+		prerequisite = {
+			focus = WCH_the_Tsars_own_division
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_the_Tsars_own_division
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_true_modern_warfare"
+			hidden_effect = {
+				WHC_tax_conflict_towards_military = yes
+				WHC_tax_conflict_towards_military = yes
+				load_oob = WCH_mechanized_focus
+			}
+			custom_effect_tooltip = WHC_Army_very_favoured
+			custom_effect_tooltip = AMR_cavalry_tp
+			add_tech_bonus = {
+				name = military_bonus
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = WCH_stabilize_budget
+		icon = GFX_goal_KIR_Send_in_the_Bridgeburners
+		cost = 3.00
+		prerequisite = {
+			focus = WCH_reclamation_act
+			focus = WCH_the_Far_East_Finest
+		}
+		prerequisite = {
+			focus = WCH_eastern_defence_scheme3
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_eastern_defence_scheme3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_stabilize_budget"
+			add_stability = 0.2
+			country_event = {
+				id = WCH.7
+				days = 1
+			}
+		}
+	}
+
+
+
+
+	default = no
+}
+
+focus_tree = {
+	id = WCH_consolidation
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WCH
+		}
+	}
+	default = no
+	shared_focus = WCH_settling_accounts
+}
+
+#Expansion Tree
+shared_focus = {
+	id = WCH_settling_accounts
+	icon = GFX_goal_KIR_The_Vyatka_General_Staff_Academy
+	cost = 3.00
+	x = 7
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_settling_accounts"
+		add_political_power = 50
+		country_event = {
+			id = WCH.8
+			days = 1
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_ready_the_troops
+	icon = GFX_goal_KIR_The_Imperial_Russian_Army
+	cost = 3.00
+	x = 7
+	y = 1
+	prerequisite = {
+		focus = WCH_settling_accounts
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_ready_the_troops"
+		add_manpower = 7500
+		add_war_support = 0.05
+	}
+}
+
+shared_focus = {
+	id = WCH_end_the_barbarism
+	icon = GFX_generic_amur_war
+	cost = 3.00
+	x = 6
+	y = 2
+	prerequisite = {
+		focus = WCH_ready_the_troops
+	}
+	available = {
+		is_neighbor_of = AMR
+	}
+	bypass = {
+		AMR = {
+			exists = no
+		}
+	}
+	will_lead_to_war_with = AMR
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_end_the_barbarism"
+		declare_war_on = {
+			target = AMR
+			type = annex_everything
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_topple_the_pedestal
+	icon = GFX_AMR_The_One_True_Vozhd
+	cost = 3.00
+	x = 4
+	y = 3
+	prerequisite = {
+		focus = WCH_end_the_barbarism
+	}
+	available = {
+		owns_state = 561
+		owns_state = 886
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_topple_the_pedestal"
+		add_stability = 0.05
+		country_event = {
+			id = WCH.9
+			days = 1
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_take_their_place
+	icon = GFX_WCH_Take_Their_Place
+	cost = 3.00
+	x = 6
+	y = 3
+	prerequisite = {
+		focus = WCH_end_the_barbarism
+	}
+	available = {
+		owns_state = 561
+		owns_state = 886
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_take_their_place"
+		custom_effect_tooltip = AMR_jap_relations_tp
+		RUS_integration_cost_days_decrease = yes
+		country_event = {
+			id = WCH.16
+			days = 1
+		}
+		hidden_effect = {
+			set_country_flag = AMR_JAP_relations
+			set_variable = {
+				var = AMR_JAP_support
+				value = 5
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_the_magadan_gamble
+	icon = GFX_generic_magadan_war
+	cost = 3.00
+	x = 8
+	y = 2
+	prerequisite = {
+		focus = WCH_ready_the_troops
+	}
+	available = {
+		is_neighbor_of = MAG
+	}
+	bypass = {
+		MAG = {
+			exists = no
+		}
+	}
+	will_lead_to_war_with = MAG
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_magadan_gamble"
+		declare_war_on = {
+			target = MAG
+			type = annex_everything
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_uncover_the_caches
+	icon = GFX_TNO_generic_arms_shipments
+	cost = 3.00
+	x = 8
+	y = 3
+	available = {
+		owns_state = 562
+	}
+	prerequisite = {
+		focus = WCH_the_magadan_gamble
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_uncover_the_caches"
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1500
+			producer = MAG
+		}
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment
+			amount = 300
+			producer = MAG
+		}
+		hidden_effect = {
+			country_event = { id = WCH.17 days = 3 random = 24 }
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_employment_for_the_mercenaries
+	icon = GFX_MAG_A_Mercenary_Force
+	cost = 3.00
+	x = 10
+	y = 3
+	prerequisite = {
+		focus = WCH_the_magadan_gamble
+	}
+	available = {
+		owns_state = 562
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_employment_for_the_mercenaries"
+		custom_effect_tooltip = WCH_employment_for_the_mercenaries_tt
+		hidden_effect = {
+			load_oob = MAG_mercs
+			country_event = { id = WCH.38 days = 4 random = 24 }
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_disband_the_rfp
+	icon = GFX_RAJ_Deal_With_Fascist_Militia
+	cost = 3.00
+	x = 7
+	y = 4
+	prerequisite = {
+		focus = WCH_topple_the_pedestal
+	}
+	prerequisite = {
+		focus = WCH_take_their_place
+	}
+	prerequisite = {
+		focus = WCH_uncover_the_caches
+	}
+	prerequisite = {
+		focus = WCH_employment_for_the_mercenaries
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_disband_the_rfp"
+		add_political_power = 50
+		add_popularity = {
+			ideology = national_socialism
+			popularity = -0.10
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.10
+		}
+		country_event = {
+			id = WCH.10
+			days = 1
+		}
+	}
+}
+shared_focus = {
+	id = WCH_march_on_yakutia
+	icon = GFX_generic_yakutia_war
+	cost = 3.00
+	x = 7
+	y = 5
+	prerequisite = {
+		focus = WCH_disband_the_rfp
+	}
+	bypass = {
+		YAK = {
+			exists = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_march_on_yakutia"
+		YAK = {
+			country_event = { id = WCH.39 }
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = FAR_EAST_UNIFYING
+					}
+				}
+				OMO = {
+					country_event = { id = OMO.1 days = 5 random = 10 }
+				}
+				set_global_flag = FAR_EAST_UNIFYING
+			}
+		}
+	}
+}
+shared_focus = {
+	id = WCH_the_diamond_age
+	icon = GFX_COG_Blood_Diamonds
+	cost = 3.00
+	x = 6
+	y = 6
+	prerequisite = {
+		focus = WCH_march_on_yakutia
+	}
+	available = {
+		owns_state = 574
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_diamond_age"
+		add_offsite_building = { type = industrial_complex level = 2 }
+		AMR_increase_JAP_support_low = yes
+	}
+}
+shared_focus = {
+	id = WCH_yakut_autonomy
+	icon = GFX_generic_yakutia_diplo
+	cost = 3.00
+	x = 8
+	y = 6
+	prerequisite = {
+		focus = WCH_march_on_yakutia
+	}
+	available = {
+		owns_state = 574
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_yakut_autonomy"
+		country_event = {
+			id = WCH.11
+			days = 1
+		}
+		add_stability = 0.05
+		add_manpower = 1500
+	}
+}
+shared_focus = {
+	id = WCH_reinforce_the_borders
+	icon = GFX_BAS_fortification_production_charter
+	cost = 3.00
+	x = 7
+	y = 7
+	prerequisite = {
+		focus = WCH_the_diamond_age
+	}
+	prerequisite = {
+		focus = WCH_yakut_autonomy
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_reinforce_the_borders"
+		RUS_integration_cost_days_decrease = yes
+	}
+}
+shared_focus = {
+	id = WCH_the_atamans_legacy
+	icon = GFX_WCH_Legacy_Of_The_Ataman
+	cost = 3.00
+	x = 6
+	y = 8
+	prerequisite = {
+		focus = WCH_reinforce_the_borders
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_atamans_legacy"
+		add_timed_idea = { idea = WCH_atamans_legacy days = 720 }
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = WCH_stocking_up
+	icon = GFX_MAG_The_Best_Guns_Money_Can_Buy
+	cost = 3.00
+	x = 8
+	y = 8
+	prerequisite = {
+		focus = WCH_reinforce_the_borders
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_stocking_up"
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2000
+			producer = WCH
+		}
+		add_equipment_to_stockpile = {
+			type = anti_tank_equipment
+			amount = 250
+			producer = WCH
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 150
+			producer = WCH
+		}
+	}
+}
+shared_focus = {
+	id = WCH_the_far_eastern_reclamation
+	icon = GFX_KEM_Columns_of_Tanks
+	cost = 3.00
+	x = 7
+	y = 9
+	prerequisite = {
+		focus = WCH_the_atamans_legacy
+	}
+	prerequisite = {
+		focus = WCH_stocking_up
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_far_eastern_reclamation"
+		add_war_support = 0.1
+		add_manpower = 5000
+		custom_effect_tooltip = WCH_the_far_eastern_reclamation_tt
+		add_timed_idea = { idea = RUS_far_east_war days = 365 }
+		hidden_effect = {
+			set_country_flag = WCH_FAR_EAST_RECLAMATION
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_remember_red_october
+	icon = GFX_IRK_in_the_trenches
+	cost = 3.00
+	x = 3
+	y = 10
+	prerequisite = {
+		focus = WCH_the_far_eastern_reclamation
+	}
+	allow_branch = {
+		has_country_flag = WCH_FAR_EAST_RECLAMATION
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_remember_red_october"
+		army_experience = 15
+
+	}
+}
+
+shared_focus = {
+	id = WCH_invade_irkutsk
+	icon = GFX_generic_irkutsk_war
+	cost = 3.00
+	x = 2
+	y = 11
+	prerequisite = {
+		focus = WCH_remember_red_october
+	}
+	bypass = {
+		OR = {
+			IRK = { exists = no }
+			has_war_with = IRK
+		}
+	}
+	available = {
+		IRK = {
+			exists = yes
+		}
+	}
+	will_lead_to_war_with = IRK
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_invade_irkutsk"
+		declare_war_on = {
+			target = IRK
+			type = annex_everything
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_the_paris_of_siberia
+	icon = GFX_The_Model_City
+	cost = 3.00
+	x = 2
+	y = 12
+	prerequisite = {
+		focus = WCH_invade_irkutsk
+		focus = WCH_invade_buryatia
+	}
+	available = {
+		owns_state = 566
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_paris_of_siberia"
+		566 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_invade_buryatia
+	icon = GFX_generic_buryatia_war
+	cost = 3.00
+	x = 4
+	y = 11
+	prerequisite = {
+		focus = WCH_remember_red_october
+	}
+	available = {
+		BRY = {
+			exists = yes
+		}
+	}
+	bypass = {
+		OR = {
+			BRY = { exists = no }
+			has_war_with = BRY
+		}
+	}
+	will_lead_to_war_with = BRY
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_invade_buryatia"
+		declare_war_on = {
+			target = BRY
+			type = annex_everything
+		}
+	}
+}
+
+shared_focus = {
+	id = WCH_trials_for_the_revolutionaries
+	icon = GFX_generic_show_trials
+	cost = 3.00
+	x = 4
+	y = 12
+	available = {
+		owns_state = 564
+	}
+	prerequisite = {
+		focus = WCH_invade_buryatia
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_trials_for_the_revolutionaries"
+		country_event = { id = WCH.13 days = 1 }
+	}
+}
+
+shared_focus = {
+	id = WCH_the_july_tragedy_avenged
+	icon = GFX_generic_smash_communists
+	cost = 3.00
+	x = 3
+	y = 13
+	prerequisite = {
+		focus = WCH_trials_for_the_revolutionaries
+		focus = WCH_the_paris_of_siberia
+	}
+	available = {
+		owns_state = 566
+		owns_state = 565
+		owns_state = 564
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_july_tragedy_avenged"
+		RUS_integration_cost_days_decrease = yes
+	}
+}
+
+shared_focus = {
+	id = WCH_invade_aldan
+	icon = GFX_generic_aldan_war
+	cost = 3.00
+	x = 7
+	y = 10
+	prerequisite = {
+		focus = WCH_the_far_eastern_reclamation
+	}
+	allow_branch = {
+		has_country_flag = WCH_FAR_EAST_RECLAMATION
+	}
+	bypass = {
+		SEV = {
+			exists = no
+		}
+	}
+	will_lead_to_war_with = SEV
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_invade_aldan"
+		declare_war_on = {
+			target = SEV
+			type = annex_everything
+		}
+	}
+}
+shared_focus = {
+	id = WCH_fill_the_imperial_treasury
+	icon = GFX_TNO_generic_gold_coins
+	cost = 3.00
+	x = 7
+	y = 11
+	prerequisite = {
+		focus = WCH_invade_aldan
+	}
+	available = {
+		owns_state = 760
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_fill_the_imperial_treasury"
+		add_political_power = 50
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+shared_focus = {
+	id = WCH_the_war_in_the_north
+	icon = GFX_generic_men_invade
+	cost = 3.00
+	x = 11
+	y = 10
+	bypass = {
+		OMO = {
+			exists = no
+		}
+	}
+	available = {
+		OMO = {
+			has_war_with = WCH
+		}
+	}
+	prerequisite = {
+		focus = WCH_the_far_eastern_reclamation
+	}
+	allow_branch = {
+		has_country_flag = WCH_FAR_EAST_RECLAMATION
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_war_in_the_north"
+		add_timed_idea = { idea = WCH_northern_war days = 180 }
+	}
+}
+shared_focus = {
+	id = WCH_god_and_emperor
+	icon = GFX_FSR_Only_God_And_His_Servants
+	cost = 3.00
+	x = 11
+	y = 11
+	bypass = {
+		OMO = {
+			exists = no
+		}
+	}
+	prerequisite = {
+		focus = WCH_the_war_in_the_north
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_god_and_emperor"
+		swap_ideas = {
+			remove_idea = OMO_peasant_uprisings
+			add_idea = OMO_peasant_uprisings_2
+		}
+	}
+}
+shared_focus = {
+	id = WCH_behind_enemy_lines
+	icon = GFX_KEM_Lines_of_Infantry
+	cost = 3.00
+	x = 10
+	y = 12
+	bypass = {
+		OMO = {
+			exists = no
+		}
+	}
+	prerequisite = {
+		focus = WCH_god_and_emperor
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_behind_enemy_lines"
+		OMO = {
+			country_event = { id = WCH.14 days = 1 }
+			random_owned_state = {
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+			}
+			random_owned_state = {
+				damage_building = {
+					type = infrastructure
+					damage = 1
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = WCH_remind_them_of_pugachev
+	icon = GFX_generic_execute
+	cost = 3.00
+	x = 12
+	y = 12
+	bypass = {
+		OMO = {
+			exists = no
+		}
+	}
+	prerequisite = {
+		focus = WCH_god_and_emperor
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_remind_them_of_pugachev"
+		add_manpower = -250
+		swap_ideas = {
+			remove_idea = OMO_peasant_uprisings_2
+			add_idea = OMO_peasant_uprisings_3
+		}
+	}
+}
+shared_focus = {
+	id = WCH_the_end_of_the_heresy
+	icon = GFX_GER_A_Gentle_Purge
+	cost = 3.00
+	x = 11
+	y = 13
+	prerequisite = {
+		focus = WCH_remind_them_of_pugachev
+	}
+	prerequisite = {
+		focus = WCH_behind_enemy_lines
+	}
+	available = {
+		owns_state = 644
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_end_of_the_heresy"
+		remove_ideas = OMO_peasant_uprisings_3
+		add_manpower = -125
+		RUS_integration_cost_days_decrease = yes
+	}
+}
+shared_focus = {
+	id = WCH_the_tsars_new_groove
+	icon = GFX_goal_KIR_Many_Shades_of_Monarchism
+	cost = 3.00
+	x = 7
+	y = 14
+	prerequisite = {
+		focus = WCH_the_july_tragedy_avenged
+	}
+	prerequisite = {
+		focus = WCH_the_end_of_the_heresy
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_tsars_new_groove"
+		add_stability = 0.1
+		army_experience = 10
+		country_event = { id = WCH.15 days = 1 }
+	}
+}
+
+### Regional Trees ###
+focus_tree = {
+	id = WCH_chita_regional
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WCH
+		}
+	}
+	default = no
+
+	##### Regional Political tree #####
+	focus = {
+		id = WCH_the_start_of_something_special
+		icon = GFX_WCH_The_Start_of_Something_Special
+		cost = 3.6
+		x = 7
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_start_of_something_special"
+			add_political_power = 75
+			set_country_flag = WCH_a_quiet_dinner_preparations
+			set_variable = { WCH_military_influence = 15 }
+			clamp_variable = { var = WCH_military_influence min = 0 max = 30 }
+			unlock_decision_category_tooltip = WCH_a_quiet_dinner_category
+			hidden_effect = {
+				country_event = { id = WCH_regional.18 days = 2 random = 24 }
+				country_event = { id = WCH_regional.1 days = 7 random = 48 }
+				country_event = { id = WCH_regional.21 days = 21 random = 48 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_our_hard_earned_land
+		icon = GFX_RAJ_National_Land_Reform
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_start_of_something_special
+		}
+		x = -3
+		y = 1
+		relative_position_id = WCH_the_start_of_something_special
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_our_hard_earned_land"
+			RUS_decrease_administrative_strain = yes
+		}
+	}
+	focus = {
+		id = WCH_the_imperial_governing_committee
+		icon = GFX_ORE_establish_the_planning_commission
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_our_hard_earned_land
+		}
+		x = -2
+		y = 1
+		relative_position_id = WCH_our_hard_earned_land
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_imperial_governing_committee"
+			country_event = { id = WCH_regional.2 }
+		}
+	}
+	focus = {
+		id = WCH_extend_land_grants
+		icon = GFX_COG_Selling_off_the_Land
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_imperial_governing_committee
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_the_imperial_governing_committee
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_extend_land_grants"
+			country_event = { id = WCH_regional.3 }
+		}
+	}
+	focus = {
+		id = WCH_finalize_the_new_system
+		icon = GFX_GER_convene_the_parties
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_extend_land_grants
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_extend_land_grants
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_finalize_the_new_system"
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.035
+			}
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = WCH_oppositional_remnants
+		icon = GFX_SAM_Dealing_with_Dissent
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_our_hard_earned_land
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_our_hard_earned_land
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_oppositional_remnants"
+			RUS_decrease_administrative_strain = yes
+			hidden_effect = {
+				country_event = { id = WCH_regional.54 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_the_cultists_the_fascists_the_reds
+		icon = GFX_speer_purge_the_officers
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_oppositional_remnants
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_oppositional_remnants
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_cultists_the_fascists_the_reds"
+			country_event = { id = WCH_regional.4 }
+		}
+	}
+	focus = {
+		id = WCH_imperial_department_of_order_and_security
+		icon = GFX_MAG_Acquire_Advisors
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_cultists_the_fascists_the_reds
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_the_cultists_the_fascists_the_reds
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_imperial_department_of_order_and_security"
+			add_ideas = tno_security_security_service
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				create_intelligence_agency = {
+					name = "Imperskoye Otdeleniye Poryadka i Bezopasnosti"
+					icon = "GFX_intelligence_agency_logo_kir"
+				}
+			}
+			hidden_effect = {
+				country_event = { id = WCH_regional.45 days = 7 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_were_here_to_stay
+		icon = GFX_Generic_Admininistration
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_cultists_the_fascists_the_reds
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_the_cultists_the_fascists_the_reds
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_were_here_to_stay"
+			RUS_decrease_administrative_strain = yes
+			hidden_effect = {
+				country_event = { id = WCH_regional.52 days = 2 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_tighten_control
+		icon = GFX_WCH_tighten_control
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_start_of_something_special
+		}
+		mutually_exclusive = {
+			focus = WCH_faith_in_mikhail
+		}
+		x = 2
+		y = 1
+		relative_position_id = WCH_the_start_of_something_special
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_tighten_control"
+			RUS_decrease_administrative_strain = yes
+			WCH_military_influence_increase_low = yes
+			WCH_civilian_influence_decrease_low = yes
+			set_country_flag = WCH_supported_shepunov
+			hidden_effect = {
+				country_event = { id = WCH_regional.29 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_the_hidden_tsar
+		icon = GFX_MAG_The_Tsar
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_tighten_control
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_tighten_control
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_hidden_tsar"
+			WCH_civilian_influence_decrease_low = yes
+			hidden_effect = {
+				country_event = { id = WCH_regional.30 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_confirm_shepunov
+		icon = GFX_WCH_Confirm_Shepunov
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_hidden_tsar
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_the_hidden_tsar
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_confirm_shepunov"
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.025
+			}
+			WCH_military_influence_increase_high = yes
+			hidden_effect = {
+				country_event = { id = WCH_regional.32 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_the_military_political_system
+		icon = GFX_WCH_The_Military_Political_System
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_confirm_shepunov
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_confirm_shepunov
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_military_political_system"
+			RUS_decrease_administrative_strain = yes
+			WCH_military_influence_increase_medium = yes
+			hidden_effect = {
+				country_event = { id = WCH_regional.34 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_faith_in_mikhail
+		icon = GFX_WCH_the_true_heir_of_harbin
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_start_of_something_special
+		}
+		mutually_exclusive = {
+			focus = WCH_tighten_control
+		}
+		x = 5
+		y = 1
+		relative_position_id = WCH_the_start_of_something_special
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_faith_in_mikhail"
+			country_event = { id = WCH_regional.22 }
+			RUS_decrease_administrative_strain = yes
+			WCH_military_influence_decrease_low = yes
+			WCH_civilian_influence_increase_low = yes
+			set_country_flag = WCH_supported_mikhail
+		}
+	}
+	focus = {
+		id = WCH_public_visits_private_audiences
+		icon = GFX_JAP_Make_Promises_to_the_Bureaucrats
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_faith_in_mikhail
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_faith_in_mikhail
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_public_visits_private_audiences"
+			country_event = { id = WCH_regional.23 }
+		}
+	}
+	focus = {
+		id = WCH_volkogonovs_clique
+		icon = GFX_WCH_Volkogonovs_Clique
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_public_visits_private_audiences
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_public_visits_private_audiences
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_volkogonovs_clique"
+			country_event = { id = WCH_regional.25 }
+		}
+	}
+	focus = {
+		id = WCH_pull_back_the_curtain
+		icon = GFX_WCH_pull_back_the_curtains
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_volkogonovs_clique
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_volkogonovs_clique
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_pull_back_the_curtain"
+			RUS_decrease_administrative_strain = yes
+			WCH_military_influence_decrease_high = yes
+			WCH_civilian_influence_increase_high = yes
+			country_event = { id = WCH_regional.27 }
+		}
+	}
+	focus = {
+		id = WCH_a_curt_realization
+		icon = GFX_TNO_generic_investigation
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_military_political_system
+			focus = WCH_pull_back_the_curtain
+		}
+		prerequisite = {
+			focus = WCH_were_here_to_stay
+		}
+		prerequisite = {
+			focus = WCH_imperial_department_of_order_and_security
+		}
+		prerequisite = {
+			focus = WCH_finalize_the_new_system
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_were_here_to_stay
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_curt_realization"
+			add_stability = 0.05
+			add_war_support = 0.05
+			hidden_effect = {
+				country_event = { id = WCH_regional.36 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_making_a_play
+		icon = GFX_Generic_Shady_Deal
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_a_curt_realization
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_a_curt_realization
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_making_a_play"
+			if = {
+				limit = {
+					has_completed_focus = WCH_tighten_control
+				}
+				WCH_military_influence_increase_low = yes
+				hidden_effect = {
+					country_event = { id = WCH_regional.38 days = 4 random = 24 }
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = WCH_faith_in_mikhail
+				}
+				WCH_military_influence_decrease_low = yes
+				hidden_effect = {
+					country_event = { id = WCH_regional.37 days = 4 random = 24 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_shoring_up_support
+		icon = GFX_generic_diplomacy_peace
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_making_a_play
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_making_a_play
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_shoring_up_support"
+			country_event = { id = WCH_regional.5 }
+		}
+	}
+	focus = {
+		id = WCH_the_final_preparations
+		icon = GFX_JAP_Get_to_Work
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_making_a_play
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_making_a_play
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_final_preparations"
+			if = {
+				limit = {
+					has_completed_focus = WCH_the_military_political_system
+				}
+				WCH_military_influence_increase_medium = yes
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = WCH_pull_back_the_curtain
+				}
+				WCH_military_influence_decrease_medium = yes
+				hidden_effect = {
+					country_event = { id = WCH_regional.39 days = 4 random = 24 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_a_quiet_dinner
+		icon = GFX_JAP_Dine_with_Admirals
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_shoring_up_support
+		}
+		prerequisite = {
+			focus = WCH_the_final_preparations
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_shoring_up_support
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_quiet_dinner"
+			clr_country_flag = WCH_a_quiet_dinner_preparations
+			custom_effect_tooltip = WCH_the_final_preparations_tt
+			hidden_effect = {
+				country_event = { id = WCH_regional.20 hours = 3 }
+			}
+		}
+	}
+
+	##### Regional Economy tree #####
+	focus = {
+		id = WCH_expand_the_idc
+		icon = GFX_USA_The_Economic_Opportunity_Act
+		cost = 3.6
+		x = 20
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_expand_the_idc"
+			swap_ideas = {
+				remove_idea = WCH_imperial_development_company
+				add_idea = WCH_imperial_development_company_regional
+			}
+		}
+	}
+	focus = {
+		id = WCH_clearing_a_path
+		icon = GFX_MAG_Building_the_Wastes
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_expand_the_idc
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_expand_the_idc
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_clearing_a_path"
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+			country_event = { id = WCH_regional.8 }
+		}
+	}
+	focus = {
+		id = WCH_transforming_the_wastes
+		icon = GFX_ITA_Modernize_the_Infrastructures
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_clearing_a_path
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_clearing_a_path
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_transforming_the_wastes"
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_riches_of_the_far_east
+		icon = GFX_TOB_The_Resources_of_Siberia
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_expand_the_idc
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_expand_the_idc
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_riches_of_the_far_east"
+			add_resource = {
+				type = tungsten
+				amount = 24
+				state = 565
+			}
+			add_resource = {
+				type = chromium
+				amount = 14
+				state = 760
+			}
+		}
+	}
+	focus = {
+		id = WCH_exploit_the_prisoners
+		icon = GFX_TNO_generic_prison_camp
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_riches_of_the_far_east
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_riches_of_the_far_east
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_exploit_the_prisoners"
+			add_ideas = tno_penal_system_penal_labor
+			country_event = { id = WCH_regional.9 }
+		}
+	}
+	focus = {
+		id = WCH_birth_of_an_industry
+		icon = GFX_MAG_Siberian_Factories
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_transforming_the_wastes
+		}
+		prerequisite = {
+			focus = WCH_exploit_the_prisoners
+		}
+		x = 2
+		y = 1
+		relative_position_id = WCH_transforming_the_wastes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_birth_of_an_industry"
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_japanese_investments
+		icon = GFX_JAP_Make_New_Friends
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_birth_of_an_industry
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_birth_of_an_industry
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_japanese_investments"
+			AMR_increase_JAP_support_low = yes
+			TNO_improve_research_facilities_low = yes
+			TNO_improve_industrial_expertise_low = yes
+			hidden_effect = {
+				country_event = { id = WCH_regional.17 days = 3 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_cutting_edge_equipment
+		icon = GFX_CHI_Modern_Construction_Equipment_New
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_japanese_investments
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_japanese_investments
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_cutting_edge_equipment"
+			TNO_improve_industrial_equipment_high = yes
+			add_to_variable = { national_debt = 100 }
+			custom_effect_tooltip = WCH_cutting_edge_equipment_tt
+		}
+	}
+	focus = {
+		id = WCH_efficiency_is_key
+		icon = GFX_CHI_Improving_Factory_Efficiency
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_cutting_edge_equipment
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_cutting_edge_equipment
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_efficiency_is_key"
+			add_ideas = WCH_japanese_efficiency
+		}
+	}
+	focus = {
+		id = WCH_the_modern_zemstva
+		icon = GFX_goal_KIR_Imperial_Council
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_birth_of_an_industry
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_birth_of_an_industry
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_modern_zemstva"
+			add_to_variable = { GDP_growth = 0.005 }
+			add_to_variable = { GDP = 100 }
+			custom_effect_tooltip = WCH_the_modern_zemstva_tt
+		}
+	}
+	focus = {
+		id = WCH_imperial_corporations
+		icon = GFX_VIN_Rights_of_Corporation
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_modern_zemstva
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_the_modern_zemstva
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_imperial_corporations"
+			add_ideas = WCH_imperial_corporations_idea
+		}
+	}
+	focus = {
+		id = WCH_new_industrial_centers
+		icon = GFX_generic_diplomacy_industrial
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_imperial_corporations
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_imperial_corporations
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_new_industrial_centers"
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_redirect_the_workforce
+		icon = GFX_PRM_Work_For_Your_Nation
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_birth_of_an_industry
+		}
+		x = 0
+		y = 2
+		relative_position_id = WCH_birth_of_an_industry
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_redirect_the_workforce"
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				country_event = { id = WCH_regional.43 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_the_east_awakens
+		icon = GFX_PAV_heart_of_siberia
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_redirect_the_workforce
+		}
+		prerequisite = {
+			focus = WCH_efficiency_is_key
+		}
+		prerequisite = {
+			focus = WCH_new_industrial_centers
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_efficiency_is_key
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_east_awakens"
+			TNO_improve_poverty_med = yes
+			hidden_effect = {
+				country_event = { id = WCH_regional.42 days = 4 random = 24 }
+			}
+		}
+	}
+
+	##### Regional Military tree #####
+	focus = {
+		id = WCH_lessons_of_war
+		icon = GFX_goal_KIR_The_Imperial_Russian_Army
+		cost = 3.6
+		x = 30
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_lessons_of_war"
+			army_experience = 10
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = WCH_examine_the_troops
+		icon = GFX_CAU_Prepare_the_Troops
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_lessons_of_war
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_lessons_of_war
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_examine_the_troops"
+			add_manpower = -500
+			army_experience = 25
+		}
+	}
+	focus = {
+		id = WCH_tighten_the_standards
+		icon = GFX_URL_experimental_training_methods
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_examine_the_troops
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_examine_the_troops
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_tighten_the_standards"
+			TNO_improve_army_professionalism_med = yes
+		}
+	}
+	focus = {
+		id = WCH_improve_the_methods
+		icon = GFX_MAG_Fix_Bayonets
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_tighten_the_standards
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_tighten_the_standards
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_improve_the_methods"
+			add_ideas = tno_training_basic_training
+		}
+	}
+	focus = {
+		id = WCH_reignite_the_movement
+		icon = GFX_WCH_reignite_the_movement
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_lessons_of_war
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_lessons_of_war
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_reignite_the_movement"
+			add_war_support = 0.05
+			add_political_power = 50
+			add_manpower = 10000
+			hidden_effect = {
+				country_event = { id = WCH_regional.15 days = 7 random = 48 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_imperial_war_academies
+		icon = GFX_goal_KIR_The_Vyatka_General_Staff_Academy
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_reignite_the_movement
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_reignite_the_movement
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_imperial_war_academies"
+			army_experience = 10
+			TNO_improve_army_professionalism_low = yes
+		}
+	}
+	focus = {
+		id = WCH_the_next_generation
+		icon = GFX_GGR_March_On_Copenhagen
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_imperial_war_academies
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_imperial_war_academies
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_next_generation"
+			add_manpower = 15000
+			add_political_power = 25
+			remove_ideas = WCH_sunset_of_white_chivalry
+		}
+	}
+	focus = {
+		id = WCH_a_new_white_army
+		icon = GFX_new_model_army_goal
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_improve_the_methods
+		}
+		prerequisite = {
+			focus = WCH_the_next_generation
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_improve_the_methods
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_new_white_army"
+			add_ideas = WCH_new_white_army
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = WCH_mikhail_victorious
+					}
+					army_experience = 15
+				}
+				else = {
+					country_event = { id = WCH_regional.14 days = 3 random = 24 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_beginnings_of_a_fleet
+		icon = GFX_KIR_imperial_navy
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_a_new_white_army
+		}
+		x = -2
+		y = 1
+		relative_position_id = WCH_a_new_white_army
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_beginnings_of_a_fleet"
+			navy_experience = 50
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = naval_equipment
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 1000
+				producer = WCH
+			}
+		}
+	}
+	focus = {
+		id = WCH_protecting_our_trade
+		icon = GFX_GER_Naval_Hit_and_Run
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_beginnings_of_a_fleet
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_beginnings_of_a_fleet
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_protecting_our_trade"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = green_water_navy
+			}
+			hidden_effect = {
+				country_event = { id = WCH_regional.46 days = 12 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_weapons_of_the_modern_age
+		icon = GFX_TNO_generic_gun_production
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_a_new_white_army
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_a_new_white_army
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_weapons_of_the_modern_age"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_anti_tank
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = WCH_the_cavalry_of_the_future
+		icon = GFX_TOB_Mechanized_Troop_Training
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_weapons_of_the_modern_age
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_weapons_of_the_modern_age
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_cavalry_of_the_future"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = MBT
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = APC
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = IFV
+			}
+			hidden_effect = {
+				country_event = { id = WCH_regional.41 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_take_to_the_skies
+		icon = GFX_TOB_The_Airfields_of_Surgut
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_a_new_white_army
+		}
+		x = 2
+		y = 1
+		relative_position_id = WCH_a_new_white_army
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_take_to_the_skies"
+			add_equipment_to_stockpile = {
+				type = jet_fighter_equipment_1
+				amount = 50
+				producer = JAP
+			}
+		}
+	}
+	focus = {
+		id = WCH_examine_foreign_designs
+		icon = GFX_ANG_our_own_designs
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_take_to_the_skies
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_take_to_the_skies
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_examine_foreign_designs"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = light_air
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = heavy_air
+			}
+			hidden_effect = {
+				country_event = { id = WCH_regional.44 days = 7 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_our_military_reforged
+		icon = GFX_goal_KIR_Send_in_the_Bridgeburners
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_protecting_our_trade
+		}
+		prerequisite = {
+			focus = WCH_the_cavalry_of_the_future
+		}
+		prerequisite = {
+			focus = WCH_examine_foreign_designs
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_the_cavalry_of_the_future
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_our_military_reforged"
+			add_war_support = 0.05
+			add_manpower = 15000
+			tno_improve_army_professionalism = yes
+			swap_ideas = {
+				remove_idea = WCH_new_white_army
+				add_idea = WCH_new_white_army_2
+			}
+		}
+	}
+
+	##### Regional Diplomacy tree #####
+	focus = {
+		id = WCH_onwards_and_outwards
+		icon = GFX_WCH_Onwards_and_Outwards
+		cost = 3.6
+		x = 40
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_onwards_and_outwards"
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = WCH_the_new_favorite
+		icon = GFX_AST_friends_japan
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_onwards_and_outwards
+		}
+		x = -2
+		y = 1
+		relative_position_id = WCH_onwards_and_outwards
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_new_favorite"
+			add_stability = 0.03
+			add_political_power = 40
+		}
+	}
+	focus = {
+		id = WCH_asian_diplomatic_exchanges
+		icon = GFX_generic_diplomacy_peace
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_the_new_favorite
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_the_new_favorite
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_asian_diplomatic_exchanges"
+			TNO_improve_research_facilities_med = yes
+		}
+	}
+	focus = {
+		id = WCH_remembering_the_zaibatsus
+		icon = GFX_VIN_Zaibatsu_Investments
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_asian_diplomatic_exchanges
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_asian_diplomatic_exchanges
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_remembering_the_zaibatsus"
+			add_to_variable = { GDP_growth = 0.005 }
+			custom_effect_tooltip = WCH_remembering_the_zaibatsus_tt
+		}
+	}
+	focus = {
+		id = WCH_emigres_abroad
+		icon = GFX_VIN_Encourage_Immigration
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_onwards_and_outwards
+		}
+		x = 2
+		y = 1
+		relative_position_id = WCH_onwards_and_outwards
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_emigres_abroad"
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_back_to_manchuria
+		icon = GFX_MAG_sponsor_the_liberation_front
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_emigres_abroad
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_emigres_abroad
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_back_to_manchuria"
+			TNO_improve_industrial_expertise_med = yes
+		}
+	}
+	focus = {
+		id = WCH_across_the_ocean
+		icon = GFX_GER_Academic_Investment
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_back_to_manchuria
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_back_to_manchuria
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_across_the_ocean"
+			TNO_improve_academic_base_med = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = WCH_mikhail_victorious
+					}
+					add_political_power = 15
+				}
+				else = {
+					country_event = { id = WCH_regional.12 days = 3 random = 24 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_looking_for_recognition
+		icon = GFX_generic_diplomacy_political
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_remembering_the_zaibatsus
+		}
+		prerequisite = {
+			focus = WCH_across_the_ocean
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_remembering_the_zaibatsus
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_looking_for_recognition"
+			add_political_power = 75
+			
+		}
+	}
+	focus = {
+		id = WCH_off_to_tokyo
+		icon = GFX_JAP_sphere_reform_generic
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_looking_for_recognition
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_looking_for_recognition
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_off_to_tokyo"
+			country_event = { id = WCH_regional.13 }
+			hidden_effect = {
+				JAP = {
+					country_event = { id = WCH_regional.13 }
+					country_event = { id = WCH_regional.51 days = 21 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_a_hope_beyond_japan
+		icon = GFX_USA_Glenn_A_City_on_a_Hill
+		cost = 3.6
+		prerequisite = {
+			focus = WCH_looking_for_recognition
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_looking_for_recognition
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_hope_beyond_japan"
+			country_event = { id = WCH_regional.16 }
+		}
+	}
+}
+
+### Superregional Trees ###
+### Imperial tree ###
+focus_tree = {
+	id = WCH_chita_imperial_superregional
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WCH
+		}
+	}
+	default = no
+
+	focus = {
+		id = WCH_the_tsars_speech
+		icon = GFX_WCH_the_true_heir_of_harbin
+		cost = 2.3
+		x = 5
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_tsars_speech"
+			add_political_power = 50
+			country_event = { id = WCH_superregional.1 }
+		}
+	}
+	focus = {
+		id = WCH_enforce_the_new_imperial_system
+		icon = GFX_KIR_All_Roads_Lead_to_Romanov
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_the_tsars_speech
+		}
+		x = -4
+		y = 1
+		relative_position_id = WCH_the_tsars_speech
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_enforce_the_new_imperial_system"
+			RUS_integration_cost_days_decrease = yes
+			hidden_effect = {
+				country_event = { id = WCH_superregional.15 days = 12 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_a_new_white_movement
+		icon = GFX_goal_KIR_Legacy_of_the_Tsardom
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_enforce_the_new_imperial_system
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_enforce_the_new_imperial_system
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_new_white_movement"
+			country_event = { id = WCH_superregional.21 }
+			hidden_effect = {
+				country_event = { id = WCH_superregional.15 days = 7 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_depoliticize_the_army
+		icon = GFX_TNO_generic_forbid_guns
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_the_tsars_speech
+		}
+		x = 4
+		y = 1
+		relative_position_id = WCH_the_tsars_speech
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_depoliticize_the_army"
+			TNO_improve_army_professionalism_low = yes
+			hidden_effect = {
+				country_event = { id = WCH_superregional.17 days = 7 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_end_their_legacy
+		icon = GFX_CAU_purge_the_officers
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_enforce_the_new_imperial_system
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_enforce_the_new_imperial_system
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_end_their_legacy"
+			add_war_support = -0.05
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.05
+			}
+			hidden_effect = {
+				country_event = { id = WCH_superregional.4 days = 14 }
+				country_event = { id = WCH_superregional.16 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_make_our_claims_official
+		icon = GFX_generic_change_law_enforcement
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_end_their_legacy
+		}
+		prerequisite = {
+			focus = WCH_a_new_white_movement
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_end_their_legacy
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_make_our_claims_official"
+			RUS_integration_cost_days_decrease = yes
+			add_political_power = 35
+			hidden_effect = {
+				country_event = { id = WCH_superregional.20 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_redefine_our_history
+		icon = GFX_URL_Study_History
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_make_our_claims_official
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_make_our_claims_official
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_redefine_our_history"
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+			country_event = { id = WCH_superregional.5 }
+		}
+	}
+	focus = {
+		id = WCH_placate_the_workers_worries
+		icon = GFX_PRM_Work_For_Your_Nation
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_the_tsars_speech
+		}
+		x = 0
+		y = 2
+		relative_position_id = WCH_the_tsars_speech
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_placate_the_workers_worries"
+			RUS_integration_cost_days_decrease = yes
+			add_ideas = tno_max_workhours_12_hour_work_day
+			add_ideas = tno_pensions_trinket_pensions
+			add_ideas = tno_unemployment_trinket_subsidies
+			hidden_effect = {
+				country_event = { id = WCH_superregional.22 days = 4 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_a_new_generation_of_industry
+		icon = GFX_JAP_Standardizing_Heavy_Industry
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_placate_the_workers_worries
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_placate_the_workers_worries
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_new_generation_of_industry"
+			TNO_improve_industrial_expertise_low = yes
+		}
+	}
+	focus = {
+		id = WCH_expand_the_imperial_corporations
+		icon = GFX_VIN_Rights_of_Corporation
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_a_new_generation_of_industry
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_a_new_generation_of_industry
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_expand_the_imperial_corporations"
+			TNO_worsen_industrial_equipment_low = yes
+			swap_ideas = {
+				remove_idea = WCH_imperial_corporations_idea
+				add_idea = WCH_imperial_corporations_idea2
+			}
+			hidden_effect = {
+				country_event = { id = WCH_superregional.19 days = 7 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_introducing_new_officers
+		icon = GFX_Generic_Army_Officers
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_depoliticize_the_army
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_depoliticize_the_army
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_introducing_new_officers"
+			RUS_integration_cost_days_decrease = yes
+			country_event = { id = WCH_superregional.2 }
+		}
+	}
+	focus = {
+		id = WCH_volkogonovs_plan
+		icon = GFX_generic_writing
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_depoliticize_the_army
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_depoliticize_the_army
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_volkogonovs_plan"
+			add_manpower = 15000
+		}
+	}
+	focus = {
+		id = WCH_a_quick_chat
+		icon = GFX_JAP_sphere_reform_generic
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_introducing_new_officers
+		}
+		prerequisite = {
+			focus = WCH_volkogonovs_plan
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_introducing_new_officers
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_quick_chat"
+			country_event = { id = WCH_superregional.18 }
+		}
+	}
+	focus = {
+		id = WCH_and_a_long_call
+		icon = GFX_MAG_Old_Money
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_a_quick_chat
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_a_quick_chat
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_and_a_long_call"
+			custom_effect_tooltip = TOB_the_eagles_soar_tt
+			USA = {
+				country_event = { id = WCH_superregional.3 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_one_final_push
+		icon = GFX_new_model_army_goal
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_redefine_our_history
+		}
+		prerequisite = {
+			focus = WCH_expand_the_imperial_corporations
+		}
+		prerequisite = {
+			focus = WCH_and_a_long_call
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_expand_the_imperial_corporations
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_one_final_push"
+			add_political_power = 50
+			add_war_support = 0.1
+			country_event = { id = WCH_superregional.14 }
+		}
+	}
+	shared_focus = RUS_SIB_nukes_into_the_atomic_age
+}
+
+#### Stratocracy tree ####
+focus_tree = {
+	id = WCH_chita_stratocracy_superregional
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WCH
+		}
+	}
+	default = no
+
+	focus = {
+		id = WCH_the_new_white_order
+		icon = GFX_WCH_a_new_white_order
+		cost = 2.3
+		x = 5
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_new_white_order"
+			add_political_power = 50
+			country_event = { id = WCH_superregional.6 }
+			hidden_effect = {
+				country_event = { id = WCH_superregional.27 days = 7 random = 24 }
+				country_event = { id = WCH_superregional.31 days = 30 random_days = 30 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_our_friends_in_tokyo
+		icon = GFX_JAP_sphere_reform_generic
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_the_new_white_order
+		}
+		x = -5
+		y = 1
+		relative_position_id = WCH_the_new_white_order
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_our_friends_in_tokyo"
+			AMR_increase_JAP_support_low = yes
+			hidden_effect = {
+				country_event = { id = WCH_superregional.28 days = 7 random = 36 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_reap_the_rewards
+		icon = GFX_VIN_Rights_of_Corporation
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_our_friends_in_tokyo
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_our_friends_in_tokyo
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_reap_the_rewards"
+			TNO_improve_industrial_equipment_low = yes
+			country_event = { id = WCH_superregional.12 }
+		}
+	}
+	focus = {
+		id = WCH_a_line_in_the_sand
+		icon = GFX_Generic_Shady_Deal
+		cost = 2.3
+		available = {
+			hidden_trigger = {
+				has_country_flag = WCH_japan_delegation_sent
+			}
+		}
+		prerequisite = {
+			focus = WCH_reap_the_rewards
+		}
+		mutually_exclusive = {
+			focus = WCH_a_mutually_beneficial_arrangement
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_reap_the_rewards
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_line_in_the_sand"
+			TNO_improve_industrial_expertise_low = yes
+		}
+	}
+	focus = {
+		id = WCH_a_mutually_beneficial_arrangement
+		icon = GFX_WCH_A_Mutually_Beneficial_Arrangement
+		cost = 2.3
+		available = {
+			hidden_trigger = {
+				has_country_flag = WCH_japan_delegation_not_sent
+			}
+		}
+		prerequisite = {
+			focus = WCH_reap_the_rewards
+		}
+		mutually_exclusive = {
+			focus = WCH_a_line_in_the_sand
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_reap_the_rewards
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_mutually_beneficial_arrangement"
+			swap_ideas = {
+				remove_idea = WCH_japanese_efficiency
+				add_idea = WCH_zaibatsu_dominated_economy
+			}
+		}
+	}
+	focus = {
+		id = WCH_a_militarized_society
+		icon = GFX_PRM_A_City_On_War_Footing
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_the_new_white_order
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_the_new_white_order
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_a_militarized_society"
+			RUS_integration_cost_days_decrease = yes
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.035
+			}
+			hidden_effect = {
+				country_event = { id = WCH_superregional.7 days = 6 random = 48 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_demand_their_loyalty
+		icon = GFX_POL_germanys_loyal_sons
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_a_militarized_society
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_a_militarized_society
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_demand_their_loyalty"
+			TNO_improve_army_professionalism_low = yes
+			hidden_effect = {
+				country_event = { id = WCH_superregional.8 days = 3 random = 48 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_the_saviors_of_russia
+		icon = GFX_WCH_The_Saviors_of_Russia
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_demand_their_loyalty
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_demand_their_loyalty
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_the_saviors_of_russia"
+			RUS_integration_cost_days_decrease = yes
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = WCH_follow_the_trail
+		icon = GFX_GER_learn_their_secrets
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_a_militarized_society
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_a_militarized_society
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_follow_the_trail"
+			RUS_integration_cost_days_decrease = yes
+			add_stability = 0.05
+			country_event = { id = WCH_superregional.9 }
+		}
+	}
+	focus = {
+		id = WCH_stake_our_claim
+		icon = GFX_WCH_Stake_Our_Claim
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_follow_the_trail
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_follow_the_trail
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_stake_our_claim"
+			RUS_integration_cost_days_decrease = yes
+			hidden_effect = {
+				country_event = { id = WCH_superregional.10 days = 3 random = 48 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_secure_the_west
+		icon = GFX_Focus_Russia_Orthographic
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_the_new_white_order
+		}
+		x = 5
+		y = 1
+		relative_position_id = WCH_the_new_white_order
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_secure_the_west"
+			RUS_integration_cost_days_decrease = yes
+			add_manpower = 2500
+			hidden_effect = {
+				country_event = { id = WCH_superregional.24 days = 14 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_revive_their_industry
+		icon = GFX_generic_diplomacy_industrial
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_secure_the_west
+		}
+		x = -1
+		y = 1
+		relative_position_id = WCH_secure_the_west
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_revive_their_industry"
+			757 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			578 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				country_event = { id = WCH_superregional.25 days = 7 random = 24 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_encourage_corporate_expansion
+		icon = GFX_BRT_corporation_with_a_state_focus_icon
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_revive_their_industry
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_revive_their_industry
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_encourage_corporate_expansion"
+			swap_ideas = {
+				remove_idea = WCH_imperial_corporations_idea
+				add_idea = WCH_imperial_corporations_idea2
+			}
+		}
+	}
+	focus = {
+		id = WCH_absorb_their_strength
+		icon = GFX_Generic_Army_Officers
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_secure_the_west
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_secure_the_west
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_absorb_their_strength"
+			PAV = {
+				every_unit_leader = {
+					set_nationality = WCH
+				}
+			}
+		}
+	}
+	focus = {
+		id = WCH_old_dogs_new_tricks
+		icon = GFX_URL_experimental_training_methods
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_absorb_their_strength
+		}
+		x = 0
+		y = 1
+		relative_position_id = WCH_absorb_their_strength
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_old_dogs_new_tricks"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			hidden_effect = {
+				country_event = { id = WCH_superregional.23 days = 8 random = 48 }
+			}
+		}
+	}
+	focus = {
+		id = WCH_our_vengeance_is_near
+		icon = GFX_UPO_rally_the_russians
+		cost = 2.3
+		prerequisite = {
+			focus = WCH_the_saviors_of_russia
+		}
+		prerequisite = {
+			focus = WCH_stake_our_claim
+		}
+		prerequisite = {
+			focus = WCH_encourage_corporate_expansion
+		}
+		prerequisite = {
+			focus = WCH_old_dogs_new_tricks
+			focus = WCH_a_line_in_the_sand
+			focus = WCH_a_mutually_beneficial_arrangement
+		}
+		x = 1
+		y = 1
+		relative_position_id = WCH_the_saviors_of_russia
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus WCH_our_vengeance_is_near"
+			add_political_power = 50
+			country_event = { id = WCH_superregional.13 }
+		}
+	}
+	shared_focus = RUS_SIB_nukes_into_the_atomic_age
+}
+focus_tree = {
+	id = WCH_tsaritsa_warlord_war
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WCH
+		}
+	}
+	default = no
+	shared_focus = WCH_the_coming_war
+}

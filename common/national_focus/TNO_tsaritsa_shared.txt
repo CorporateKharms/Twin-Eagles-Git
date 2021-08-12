@@ -1,0 +1,532 @@
+#########war tree#########
+
+
+
+
+
+
+shared_focus = {
+	id = WCH_the_coming_war
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+	x = 8
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_meet_with_semyonov
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_the_coming_war
+	}
+	x = 8
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_meet_with_semyonov"
+	}
+}
+shared_focus = {
+	id = WCH_the_tsaritsa_calls_for_russias_sons
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_meet_with_semyonov
+	}
+	x = 8
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_tsaritsa_calls_for_russias_sons"
+	}
+}
+shared_focus = {
+	id = WCH_on_the_march
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_the_tsaritsa_calls_for_russias_sons
+	}
+	x = 8
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_destroy_the_devil_of_amur
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_on_the_march
+	}
+	x = 6
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_finish_the_fascists_of_magadan
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_on_the_march
+	}
+	x = 10
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_end_this_madness
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_destroy_the_devil_of_amur
+	}
+    mutually_exclusive = {
+		focus = WCH_repurpose_the_camps
+	}
+	x = 5
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_repurpose_the_camps
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_destroy_the_devil_of_amur
+	}
+    mutually_exclusive = {
+		focus = WCH_end_this_madness
+	}
+	x = 7
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_no_mercy_for_traitors
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_finish_the_fascists_of_magadan
+	}
+    mutually_exclusive = {
+		focus = WCH_buy_out_the_mercenaries
+	}
+	x = 9
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_buy_out_the_mercenaries
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_finish_the_fascists_of_magadan
+	}
+    mutually_exclusive = {
+		focus = WCH_no_mercy_for_traitors
+	}
+	x = 11
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_true_heiress_of_harbin
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_buy_out_the_mercenaries
+		focus = WCH_no_mercy_for_traitors
+	}
+    prerequisite = {
+		focus = WCH_repurpose_the_camps
+		focus = WCH_end_this_madness
+	}
+	x = 8
+	y = 6
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_look_west
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_true_heiress_of_harbin
+	}
+	x = 8
+	y = 7
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_strike_the_yakuts
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_look_west
+	}
+	x = 8
+	y = 8
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_send_the_imperial_prospector_corps
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_strike_the_yakuts
+	}
+	x = 8
+	y = 9
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_ending_yagodas_tyranny
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_send_the_imperial_prospector_corps
+	}
+	x = 2
+	y = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_march_against_sablins_revolutionaries
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_send_the_imperial_prospector_corps
+	}
+	x = 7
+	y = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_fighting_mens_uprising
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_send_the_imperial_prospector_corps
+	}
+	x = 12
+	y = 10
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_the_tsaritsas_justice
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_ending_yagodas_tyranny
+	}
+    mutually_exclusive = {
+		focus = WCH_redemption_for_the_NKDV
+	}
+	x = 1
+	y = 11
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_redemption_for_the_NKDV
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_ending_yagodas_tyranny
+	}
+    mutually_exclusive = {
+		focus = WCH_the_tsaritsas_justice
+	}
+	x = 3
+	y = 11
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_revenge_for_1917 
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_march_against_sablins_revolutionaries
+	}
+    mutually_exclusive = {
+		focus = WCH_tsaritsa_of_the_workers
+	}
+	x = 6
+	y = 11
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_tsaritsa_of_the_workers
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_march_against_sablins_revolutionaries
+	}
+    mutually_exclusive = {
+		focus = WCH_revenge_for_1917
+	}
+	x = 8
+	y = 11
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_i_came_not_with_peace
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_fighting_mens_uprising
+	}
+    mutually_exclusive = {
+		focus = WCH_concessions_to_the_peasants
+	}
+	x = 11
+	y = 11
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_concessions_to_the_peasants
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_fighting_mens_uprising
+	}
+    mutually_exclusive = {
+		focus = WCH_i_came_not_with_peace
+	}
+	x = 13
+	y = 11
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_our_duty_to_the_church
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_concessions_to_the_peasants
+        focus = WCH_i_came_not_with_peace
+	}
+    mutually_exclusive = {
+		focus = WCH_obedient_clergy
+	}
+	x = 13
+	y = 12
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_obedient_clergy
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_concessions_to_the_peasants
+        focus = WCH_i_came_not_with_peace
+	}
+    mutually_exclusive = {
+		focus = WCH_our_duty_to_the_church
+	}
+	x = 11
+	y = 12
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_turn_the_other_cheek
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_obedient_clergy
+		focus = WCH_our_duty_to_the_church
+	}
+	x = 12
+	y = 13
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_lenins_legacy_undone_forever
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_the_tsaritsas_justice
+		focus = WCH_redemption_for_the_NKDV
+	}
+    prerequisite = {
+		focus = WCH_revenge_for_1917
+		focus = WCH_tsaritsa_of_the_workers
+	}
+	x = 4.5
+	y = 13
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
+shared_focus = {
+	id = WCH_the_beginning_of_an_empire
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+		focus = WCH_lenins_legacy_undone_forever
+	}
+    prerequisite = {
+		focus = WCH_turn_the_other_cheek
+	}
+	x = 8.5
+	y = 14
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+	}
+}
