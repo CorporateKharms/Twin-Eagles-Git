@@ -3394,3 +3394,15 @@ focus_tree = {
 	default = no
 	shared_focus = WCH_the_coming_war
 }
+focus_tree = {
+	id = WCH_tsaritsa_warlord
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = WCH
+		}
+	}
+	default = no
+	shared_focus = WCH_anastasia_at_the_helm
+}

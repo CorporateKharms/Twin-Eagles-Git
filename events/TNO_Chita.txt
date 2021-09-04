@@ -2605,6 +2605,34 @@ country_event = { #One of Those Days
 #############################Anastasia Path##################################
 #Warlord
 
+country_event = { #Debug load tree
+	id = WCH_anastasia_warlord.0
+	immediate = {log = "[GetDateText]: [Root.GetName]: event WCH_anastasia_warlord.0"}
+	title = WCH_anastasia_warlord.0.t
+	desc = WCH_anastasia_warlord.0.desc
+	picture = GFX_report_event_komi_government
+
+	is_triggered_only = yes
+
+	option = {
+		name = WCH_anastasia_warlord.0.a
+		load_focus_tree = WCH_tsaritsa_warlord
+		hidden_effect = {
+			retire_country_leader = yes
+			create_country_leader = {
+	            name = "Anastasia I"
+	            desc = "ANASTASIA_DESC"
+	            picture = "Portrait_Chita_Anastasia_Romanov.dds"
+	            ideology = despotism_subtype
+	             }
+             }
+	}
+}
+
+
+
+
+
 country_event = { #A Drunk Tsarina
 	id = WCH_anastasia_warlord.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event WCH_anastasia_warlord.1"}

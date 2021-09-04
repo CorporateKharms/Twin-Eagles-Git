@@ -1,9 +1,337 @@
+#Anastasia Sex Life Simulator
+#By the Man of Sex
+
+
+#Warlord tree
+shared_focus = {
+	id = WCH_anastasia_at_the_helm
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+	x = 8
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_the_future_of_the_crown
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_anastasia_at_the_helm
+		}
+	x = 8
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_show_compassion_to_our_people
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_the_future_of_the_crown
+		}
+	x = 5
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_imperial_unions_of_workers
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_show_compassion_to_our_people
+		}
+	x = 5
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_the_first_healthcare_reform
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_imperial_unions_of_workers
+		}
+	x = 5
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_books_for_children
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_the_first_healthcare_reform
+		}
+	x = 5
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_help_the_homeless
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_books_for_children
+		}
+	x = 5
+	y = 6
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_a_guiding_hand
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_the_future_of_the_crown
+		}
+	x = 8
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_the_modern_empire
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_a_guiding_hand
+		}
+	x = 8
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_imperial_corporations
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_the_modern_empire
+		}
+	x = 8
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_support_small_businesses
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_imperial_corporations
+		}
+	x = 8
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_the_foundations_of_the_duma
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_support_small_businesses
+		}
+	x = 8
+	y = 6
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_a_new_powerful_white_army
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_the_future_of_the_crown
+		}
+	x = 11
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_ski_troopers
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_a_new_powerful_white_army
+		}
+	x = 11
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_reuse_old_mechanized_equipment
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_ski_troopers
+		}
+	x = 11
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_reopen_the_factories
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_reuse_old_mechanized_equipment
+		}
+	x = 11
+	y = 5
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_train_the_soldiers
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_reopen_the_factories
+		}
+	x = 11
+	y = 6
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_our_immediate_issues_settled
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_train_the_soldiers
+		}
+    prerequisite = {
+			focus = WCH_the_foundations_of_the_duma
+		}
+    prerequisite = {
+			focus = WCH_help_the_homeless
+		}
+	x = 8
+	y = 7
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+	}
+}
+shared_focus = {
+	id = WCH_the_tzaritsa_marches_on
+	icon = WCH_The_Peoples_Tsar
+	cost = 3.75
+	available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
+    prerequisite = {
+			focus = WCH_our_immediate_issues_settled
+		}
+	x = 8
+	y = 8
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+        load_focus_tree = WCH_tsaritsa_warlord_war
+	}
+}
+
 #########war tree#########
-
-
-
-
-
 
 shared_focus = {
 	id = WCH_the_coming_war
