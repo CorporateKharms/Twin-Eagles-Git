@@ -50,7 +50,7 @@ shared_focus = {
 	y = 2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_show_compassion_to_our_people" #event about planning the first social reforms
-        add_popularity = { ideology = despotism popularity = 0.025 }
+        add_popularity = { ideology = despotism popularity = 0.10 }
 	}
 }
 shared_focus = {

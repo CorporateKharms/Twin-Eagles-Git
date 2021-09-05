@@ -1312,6 +1312,65 @@
 
 
  ######################Anastasia Loc##############################
+ 
+ 
+ ######################Focuses#######################
+ WCH_anastasia_at_the_helm:0 "Anastasia at the Helm"
+ WCH_anastasia_at_the_helm_desc:0 ""
+ WCH_the_future_of_the_crown:0 "The Future of the Crown"
+ WCH_the_future_of_the_crown_desc:0 ""
+ WCH_show_compassion_to_our_people:0 "Show Compassion to our People"
+ WCH_show_compassion_to_our_people_desc:0 ""
+ WCH_improve_the_workers_condition:0 "Improve the Condition of the Workers"
+ WCH_improve_the_workers_condition_desc:0 ""
+ WCH_the_first_healthcare_reform:0 "The First Healthcare Reform"
+ WCH_the_first_healthcare_reform_desc:0 ""
+ WCH_books_for_children:0 "Books for Children"
+ WCH_books_for_children_desc:0 ""
+ WCH_help_the_homeless:0 "Help the Homeless"
+ WCH_help_the_homeless_desc:0 ""
+ WCH_a_guiding_hand:0 "A Guiding Hand"
+ WCH_a_guiding_hand_desc:0 ""
+ WCH_the_modern_empire:0 "The Modern Empire"
+ WCH_the_modern_empire_desc:0 ""
+ WCH_russian_imperial_corporations:0 "Russian Imperial Corporations"
+ WCH_russian_imperial_corporations_desc:0 ""
+ WCH_support_small_businesses:0 "Support Small Businesses"
+ WCH_support_small_businesses_desc:0 ""
+ WCH_the_foundations_of_the_duma:0 "The Foundations of the Duma"
+ WCH_the_foundations_of_the_duma_desc:0 ""
+ WCH_a_new_powerful_white_army:0 "A New Powerful White Army"
+ WCH_a_new_powerful_white_army_desc:0 ""
+ WCH_ski_troopers:0 "Ski Troopers"
+ WCH_ski_troopers_desc:0 ""
+ WCH_reuse_old_mechanized_equipment:0 "Scavenge Old Mechanized Equipment"
+ WCH_reuse_old_mechanized_equipment_desc:0 ""
+ WCH_reopen_the_factories:0 "Reopen the Factories"
+ WCH_reopen_the_factories_desc:0 ""
+ WCH_train_the_soldiers:0 "Train the Soldiers"
+ WCH_train_the_soldiers_desc:0 ""
+ WCH_our_immediate_issues_settled:0 "Our Immediate Issues Settled"
+ WCH_our_immediate_issues_settled_desc:0 ""
+ WCH_the_tzaritsa_marches_on:0 "The Tzaritsa Marches On"
+ WCH_the_tzaritsa_marches_on_desc:0 ""
+
+
+ #Ideas
+ WCH_organizing_the_imperial_government:0 "Organizing the Imperial Government"
+ WCH_organizing_the_imperial_government_desc:0 ""
+ WCH_the_imperial_corporations:0 "Imperial Corporations"
+ WCH_the_imperial_corporations_desc:0 ""
+ WCH_the_second_imperial_duma:0 "The Second Imperial Duma"
+ WCH_the_second_imperial_duma_desc:0 ""
+ 
+
+ 
+
+
+
+
+
+
 
 
 
@@ -1321,3 +1380,6 @@
  WCH_anastasia_warlord.1.t:0 "A Drunk Tsarina"
  WCH_anastasia_warlord.1.desc:0 "Sobchak Walked in with a list in hand on all the Strategical Warlords States in Siberia and potential Allies. When approaching Anastasia's room he noticed that the door was already open, and he is shocked to see the Tsarina by her Desk with three bottles of smuggled American wine, one of which is spilled over. \n\n"W-what Ana...anatoly what the hell do you want...?" the Tsarina Stammered "Well, your Majesty, I have gotten the list you wanted" Anatoly Replies noticing she's Drunk and she holding a picture of her Late family "Giv-Give it here and get your ass out! Korn-liov my father will fire you!" she yelled, her drunk state making her think it was 1915 again. \n\n"Your Majesty, I'm not him, you are drunk again..." Sobchak said. "WHAT DID I SAY? LEAVE, LEAVE!" Anastasia broke down in tears, thinking about her family."
  WCH_anastasia_warlord.1.a:0 "Even Wine Cannot heal old wounds"
+ WCH_anastasia_warlord.0.t:0 "Anastasia Seduces Everyone"
+ WCH_anastasia_warlord.0.desc:0 "Anastasia fucked Mikhail and shipped him back to Australia"
+ WCH_anastasia_warlord.0.a:0 "Epic"
