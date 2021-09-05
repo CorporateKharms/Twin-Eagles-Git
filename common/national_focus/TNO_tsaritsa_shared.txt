@@ -14,7 +14,8 @@ shared_focus = {
 	x = 8
 	y = 0
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_anastasia_at_the_helm"
+		add_political_power = 50
 	}
 }
 shared_focus = {
@@ -31,7 +32,7 @@ shared_focus = {
 	x = 8
 	y = 1
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_future_of_the_crown" #Event about planning the next moves
 	}
 }
 shared_focus = {
@@ -48,11 +49,12 @@ shared_focus = {
 	x = 5
 	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_show_compassion_to_our_people" #event about planning the first social reforms
+        add_popularity = { ideology = despotism popularity = 0.025 }
 	}
 }
 shared_focus = {
-	id = WCH_imperial_unions_of_workers
+	id = WCH_improve_the_workers_condition
 	icon = WCH_The_Peoples_Tsar
 	cost = 3.75
 	available_if_capitulated = no
@@ -65,7 +67,8 @@ shared_focus = {
 	x = 5
 	y = 3
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_improve_the_workers_condition"
+		TNO_improve_poverty_med = yes
 	}
 }
 shared_focus = {
@@ -77,12 +80,13 @@ shared_focus = {
 		factor = 1
 	}
     prerequisite = {
-			focus = WCH_imperial_unions_of_workers
+			focus = WCH_improve_the_workers_condition
 		}
 	x = 5
 	y = 4
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_first_healthcare_reform"
+		tno_health_care_improve = yes
 	}
 }
 shared_focus = {
@@ -99,7 +103,7 @@ shared_focus = {
 	x = 5
 	y = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_books_for_children" #Event about children reading books about the old empire
 	}
 }
 shared_focus = {
@@ -116,7 +120,8 @@ shared_focus = {
 	x = 5
 	y = 6
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_help_the_homeless"
+		TNO_improve_poverty_low = yes
 	}
 }
 shared_focus = {
@@ -133,7 +138,8 @@ shared_focus = {
 	x = 8
 	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_a_guiding_hand"
+		add_ideas = WCH_organizing_the_imperial_government
 	}
 }
 shared_focus = {
@@ -150,11 +156,12 @@ shared_focus = {
 	x = 8
 	y = 3
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_modern_empire"
+		add_stability = 0.05
 	}
 }
 shared_focus = {
-	id = WCH_imperial_corporations
+	id = WCH_russian_imperial_corporations
 	icon = WCH_The_Peoples_Tsar
 	cost = 3.75
 	available_if_capitulated = no
@@ -167,7 +174,8 @@ shared_focus = {
 	x = 8
 	y = 4
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_russian_imperial_corporations"
+		add_ideas = WCH_the_imperial_corporations
 	}
 }
 shared_focus = {
@@ -179,12 +187,12 @@ shared_focus = {
 		factor = 1
 	}
     prerequisite = {
-			focus = WCH_imperial_corporations
+			focus = WCH_russian_imperial_corporations
 		}
 	x = 8
 	y = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_support_small_businesses" #event about supporting small businesses
 	}
 }
 shared_focus = {
@@ -201,7 +209,11 @@ shared_focus = {
 	x = 8
 	y = 6
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_foundations_of_the_duma"
+		swap_ideas = {
+			remove_idea = WCH_organizing_the_imperial_government
+			add_idea = WCH_the_second_imperial_duma
+		}
 	}
 }
 shared_focus = {
@@ -218,7 +230,8 @@ shared_focus = {
 	x = 11
 	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_a_new_powerful_white_army"
+		army_experience = 10
 	}
 }
 shared_focus = {
@@ -235,7 +248,7 @@ shared_focus = {
 	x = 11
 	y = 3
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_ski_troopers" #event about skii troopers
 	}
 }
 shared_focus = {
@@ -252,7 +265,12 @@ shared_focus = {
 	x = 11
 	y = 4
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_reuse_old_mechanized_equipment"
+		add_equipment_to_stockpile = {
+				type = APC
+				amount = 80
+				producer = WCH
+			}
 	}
 }
 shared_focus = {
@@ -269,7 +287,15 @@ shared_focus = {
 	x = 11
 	y = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_reopen_the_factories"
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
 	}
 }
 shared_focus = {
@@ -286,7 +312,8 @@ shared_focus = {
 	x = 11
 	y = 6
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_train_the_soldiers"
+		TNO_improve_army_professionalism_low = yes
 	}
 }
 shared_focus = {
@@ -309,7 +336,8 @@ shared_focus = {
 	x = 8
 	y = 7
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_our_immediate_issues_settled"
+		add_political_power = 50
 	}
 }
 shared_focus = {
@@ -326,8 +354,9 @@ shared_focus = {
 	x = 8
 	y = 8
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
-        load_focus_tree = WCH_tsaritsa_warlord_war
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_tzaritsa_marches_on"
+        custom_effect_tooltip = WCH_tzaritsa_marches_on
+		load_focus_tree = WCH_tsaritsa_warlord_war
 	}
 }
 
