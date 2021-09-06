@@ -374,6 +374,7 @@ shared_focus = {
 	y = 0
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_coming_war"
+		add_war_support = 0.10
 	}
 }
 shared_focus = {
@@ -390,7 +391,7 @@ shared_focus = {
 	x = 8
 	y = 1
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_meet_with_semyonov"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_meet_with_semyonov" #meeting with semyonov event
 	}
 }
 shared_focus = {
@@ -407,7 +408,7 @@ shared_focus = {
 	x = 8
 	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_tsaritsa_calls_for_russias_sons"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_the_tsaritsa_calls_for_russias_sons" #Anastasia speech event
 	}
 }
 shared_focus = {
@@ -425,6 +426,7 @@ shared_focus = {
 	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		custom_effect_tooltip = WCH_anastasiawar_warlord_declaration
 	}
 }
 shared_focus = {
@@ -438,10 +440,19 @@ shared_focus = {
     prerequisite = {
 		focus = WCH_on_the_march
 	}
+	bypass = {
+		AMR = {
+			exists = no
+		}
+	}
 	x = 6
 	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		declare_war_on = {
+			target = AMR
+			type = annex_everything
+		}
 	}
 }
 shared_focus = {
@@ -455,10 +466,19 @@ shared_focus = {
     prerequisite = {
 		focus = WCH_on_the_march
 	}
+	bypass = {
+		MAG = {
+			exists = no
+		}
+	}
 	x = 10
 	y = 4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		declare_war_on = {
+			target = MAG
+			type = annex_everything
+		}
 	}
 }
 shared_focus = {
@@ -478,7 +498,7 @@ shared_focus = {
 	x = 5
 	y = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #The Tsaritsa destroys the camps
 	}
 }
 shared_focus = {
@@ -498,7 +518,7 @@ shared_focus = {
 	x = 7
 	y = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"  #the tsaritsa turns the camps into gulags
 	}
 }
 shared_focus = {
@@ -518,7 +538,7 @@ shared_focus = {
 	x = 9
 	y = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #execution of the leaders of magadan
 	}
 }
 shared_focus = {
@@ -538,7 +558,7 @@ shared_focus = {
 	x = 11
 	y = 5
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #mercenary buyout event
 	}
 }
 shared_focus = {
@@ -561,6 +581,7 @@ shared_focus = {
 	y = 6
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		add_political_power = 50
 	}
 }
 shared_focus = {
@@ -577,7 +598,7 @@ shared_focus = {
 	x = 8
 	y = 7
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #looking west event
 	}
 }
 shared_focus = {
@@ -587,6 +608,11 @@ shared_focus = {
 	available_if_capitulated = no
 	ai_will_do = {
 		factor = 1
+	}
+	bypass = {
+		SEV = {
+			exists = no
+		}
 	}
     prerequisite = {
 		focus = WCH_look_west
@@ -612,6 +638,7 @@ shared_focus = {
 	y = 9
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		add_war_support = 0.03
 	}
 }
 shared_focus = {
@@ -625,10 +652,19 @@ shared_focus = {
     prerequisite = {
 		focus = WCH_send_the_imperial_prospector_corps
 	}
+	bypass = {
+		IRK = {
+			exists = no
+		}
+	}
 	x = 2
 	y = 10
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		declare_war_on = {
+			target = IRK
+			type = annex_everything
+		}
 	}
 }
 shared_focus = {
@@ -642,10 +678,19 @@ shared_focus = {
     prerequisite = {
 		focus = WCH_send_the_imperial_prospector_corps
 	}
+	bypass = {
+		BRY = {
+			exists = no
+		}
+	}
 	x = 7
 	y = 10
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		declare_war_on = {
+			target = BRY
+			type = annex_everything
+		}
 	}
 }
 shared_focus = {
@@ -663,6 +708,7 @@ shared_focus = {
 	y = 10
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		add_war_support = 0.05
 	}
 }
 shared_focus = {
@@ -682,7 +728,7 @@ shared_focus = {
 	x = 1
 	y = 11
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #execution of Yagoda and the NKDV
 	}
 }
 shared_focus = {
@@ -702,7 +748,7 @@ shared_focus = {
 	x = 3
 	y = 11
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #execution of Yagoda, NKDV gets integrated
 	}
 }
 shared_focus = {
@@ -722,7 +768,7 @@ shared_focus = {
 	x = 6
 	y = 11
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #Execution of Sablin
 	}
 }
 shared_focus = {
@@ -742,7 +788,7 @@ shared_focus = {
 	x = 8
 	y = 11
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #Sablin gets spared
 	}
 }
 shared_focus = {
@@ -762,7 +808,7 @@ shared_focus = {
 	x = 11
 	y = 11
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #Execution of the insurgents
 	}
 }
 shared_focus = {
@@ -782,7 +828,7 @@ shared_focus = {
 	x = 13
 	y = 11
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #Idea collaborative paesants
 	}
 }
 shared_focus = {
@@ -803,7 +849,7 @@ shared_focus = {
 	x = 13
 	y = 12
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #Father Men is spared, Anastasia makes concessions to the chirch
 	}
 }
 shared_focus = {
@@ -824,7 +870,7 @@ shared_focus = {
 	x = 11
 	y = 12
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #The Clergy is purged of the most unloyal people
 	}
 }
 shared_focus = {
@@ -843,6 +889,7 @@ shared_focus = {
 	y = 13
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		add_stability = 0.05
 	}
 }
 shared_focus = {
@@ -865,6 +912,7 @@ shared_focus = {
 	y = 13
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		add_stability = 0.05
 	}
 }
 shared_focus = {
@@ -884,6 +932,7 @@ shared_focus = {
 	x = 8.5
 	y = 14
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march"
+		log = "[GetDateText]: [Root.GetName]: Focus WCH_on_the_march" #Regional Unification event
+		add_political_power = 50
 	}
 }
